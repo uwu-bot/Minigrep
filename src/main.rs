@@ -20,7 +20,7 @@ struct Config {
     filaname: String,
 }
 
-parse_config(args: &[String]) -> Config &str) {
+parse_config(args: &[String]) -> Config {
     let query  = &args[1];
     let filename = &args[2];
 
