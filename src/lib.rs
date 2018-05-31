@@ -1,4 +1,3 @@
-use std::env;
 use std::fs::File;
 use std::error::Error;
 use std::io::prelude::*;
@@ -16,7 +15,10 @@ impl Config {
         }
         let query  = args[1].clone();
         let filename = args[2].clone();
-        let case_sensitive = env::var("CASE_INSENSITIVE").is_err(); // if it's an error, then the var is unset. So do a case-sensitive search. If it's not an error, it's set, so case-insensitive.
+        let mut case_sensitive = true;
+        if args.contains(&String::from("-ci")) {
+            case_sensitive = false;
+        }
         Ok(Config { query, filename, case_sensitive })
     } 
 }

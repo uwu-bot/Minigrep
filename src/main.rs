@@ -2,9 +2,6 @@ extern crate minigrep;
 
 use std::env;
 use std::process;
-use std::fs::File;
-use std::error::Error;
-use std::io::prelude::*;
 use minigrep::Config;
 
 fn main() {
