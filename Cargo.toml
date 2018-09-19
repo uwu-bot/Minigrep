@@ -1,6 +1,6 @@
 [package]
 name = "minigrep"
 version = "0.1.0"
-authors = ["uwu-bot <famedanthony@hotmail.com>"]
+authors = ["uwu-bot"]
 
 [dependencies]
